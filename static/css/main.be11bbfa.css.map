@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.be11bbfa.css","mappings":"AAAA,uBAEI,WAAY,CADZ,WAEJ","sources":["components/Profile/Profile.module.css"],"sourcesContent":[".avatar {\n    width: 300px;\n    height: auto;\n}"],"names":[],"sourceRoot":""}

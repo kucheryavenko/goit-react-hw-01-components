@@ -26,7 +26,7 @@ export const Title = styled.h2`
 
 export const List = styled.ul`
     display: flex;
-    background-color: #cacaca;
+    background-color: #2196f3;
 `;
 
 export const ListItem = styled.li`
@@ -35,7 +35,9 @@ export const ListItem = styled.li`
     align-items: center;
     width: calc(100% / 5);
     padding: 16px 0;
+    
     font-size: 20px; 
+    color: #fff;
 `;
 
 export const ListItemLabel = styled.span`

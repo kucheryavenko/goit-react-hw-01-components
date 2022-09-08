@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types';
+import { FriedSection, List, ListItem, Status, Avatar, FriedName } from 'components/FriendList/FriendList.sryled'
 
 export function FriendList({ friends }) {
     return (
-        <ul class="friend-list">
-            {friends.map(({ avatar, name, isOnline, id}) =>
-                <li class="item" key={id}>
-                    <span class="status">{isOnline}</span>
-                    <img class="avatar" src={avatar} alt="User avatar" width="48" />
-                    <p class="name">{name}</p>
-                </li>
-            )}
-        </ul>
+        <FriedSection>
+            <List>
+                {friends.map(({ avatar, name, isOnline, id}) =>
+                    <ListItem key={id}>
+                        <Status isOnline={isOnline}></Status>
+                        <Avatar src={avatar} alt="User avatar" width="48" />
+                        <FriedName>{name}</FriedName>
+                    </ListItem>
+                )}
+            </List>
+        </FriedSection>
     );
 }
 

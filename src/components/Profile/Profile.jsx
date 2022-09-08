@@ -25,7 +25,7 @@ export function Profile({
   return (
     <ProfileSection>
     <ProfileContainer>
-      <DescriptionContainer class="description">
+      <DescriptionContainer>
         <Image
           src={avatarUrl}
           alt="User avatar"

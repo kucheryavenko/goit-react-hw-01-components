@@ -5,7 +5,7 @@ export function Statistics({ title, stats }) {
     return (
         <StatSection>
             <StatContainer>
-            <Title class="title">{title}</Title>
+            <Title>{title}</Title>
 
             <List>
                 {stats.map(({id, label, percentage}) => 

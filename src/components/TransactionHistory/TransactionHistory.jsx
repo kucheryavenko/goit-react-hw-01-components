@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import {TransactionSection, Table, TableHead, TableBody, TableRow} from 'components/TransactionHistory/TransactionHistory.styled'
+import { Table, TableHead, TableBody, TableRow} from 'components/TransactionHistory/TransactionHistory.styled'
+import { Box } from 'components/Box/Box';
 
 export function TransactionHistory({ items }) {
     return (
-        <TransactionSection>
+        <Box pt={1} pb={1} as="section">
             <Table>
             <TableHead>
                 <tr>
@@ -23,7 +24,7 @@ export function TransactionHistory({ items }) {
                 )}
             </TableBody>
             </Table>
-        </TransactionSection>
+        </Box>
     );
 }
 

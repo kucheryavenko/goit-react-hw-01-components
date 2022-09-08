@@ -1,19 +1,14 @@
 import styled from 'styled-components';
 
-export const ProfileSection = styled.section`
-    padding-top: 14px;
-    padding-bottom: 14px;
-`;
-
 export const ProfileContainer = styled.div`
     width: 350px;
     padding-top: 12px;
     margin-left: auto;
     margin-right: auto;
 
-    border-radius: 16px;
-    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
-    background-color: #fff;
+    border-radius: ${p => p.theme.radii.primary}px;
+    box-shadow: ${p => p.theme.shadows.shadow};
+    background-color: ${p => p.theme.colors.background};
     overflow: hidden;
 `;
 
@@ -41,7 +36,7 @@ export const DescriptionTxtName = styled.p`
 
 export const List = styled.ul`
     display: flex;
-    background-color: #cacaca;
+    background-color: ${p => p.theme.colors.primary};
 `;
 
 export const ListItem = styled.li`

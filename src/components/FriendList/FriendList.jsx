@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import { FriedSection, List, ListItem, Status, Avatar, FriedName } from 'components/FriendList/FriendList.sryled'
+import { List, ListItem, Status, Avatar, FriedName } from 'components/FriendList/FriendList.sryled'
+import { Box } from 'components/Box/Box';
 
 export function FriendList({ friends }) {
     return (
-        <FriedSection>
+        <Box pt={1} pb={1} as="section">
             <List>
                 {friends.map(({ avatar, name, isOnline, id}) =>
                     <ListItem key={id}>
@@ -13,7 +14,7 @@ export function FriendList({ friends }) {
                     </ListItem>
                 )}
             </List>
-        </FriedSection>
+        </Box>
     );
 }
 

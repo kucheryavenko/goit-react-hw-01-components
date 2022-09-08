@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-export const StatSection = styled.section`
-    padding-top: 14px;
-    padding-bottom: 14px;
-`;
-
 export const StatContainer = styled.div`
     width: 450px;
     padding-top: 24px;
@@ -12,9 +7,9 @@ export const StatContainer = styled.div`
     margin-right: auto;
     
     text-align: center;
-    border-radius: 16px;
-    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
-    background-color: #fff;
+    border-radius: ${p => p.theme.radii.primary}px;
+    box-shadow: ${p => p.theme.shadows.shadow};
+    background-color: ${p => p.theme.colors.background};
     overflow: hidden;
 `;
 
@@ -26,7 +21,7 @@ export const Title = styled.h2`
 
 export const List = styled.ul`
     display: flex;
-    background-color: #2196f3;
+    background-color: ${p => p.theme.colors.accent};
 `;
 
 export const ListItem = styled.li`
@@ -37,7 +32,7 @@ export const ListItem = styled.li`
     padding: 16px 0;
     
     font-size: 20px; 
-    color: #fff;
+    color: ${p => p.theme.colors.txt};
 `;
 
 export const ListItemLabel = styled.span`

@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-export const FriedSection = styled.section`
-    padding-top: 14px;
-    padding-bottom: 14px;
-`;
-
 export const List = styled.ul`
     display: flex;
     flex-direction: column;
@@ -14,20 +9,21 @@ export const List = styled.ul`
     padding: 12px;
     width: 180px;
 
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+    background-color: ${p => p.theme.colors.background};
+    border-radius: ${p => p.theme.radii.primary}px;
+    box-shadow: ${p => p.theme.shadows.shadow};
 `;
 
 export const ListItem = styled.li`
     display: flex;
     align-items: center;
     margin-bottom: 12px;
-    background-color: #f5f4fa;
-    border-radius: 16px;
-    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
-    width: 90%;
     padding: 8px;
+    width: 90%;
+
+    background-color: ${p => p.theme.colors.secondary};
+    border-radius: ${p => p.theme.radii.primary}px;
+    box-shadow: ${p => p.theme.shadows.shadow};
 
     :last-child {
         margin-bottom: 0;

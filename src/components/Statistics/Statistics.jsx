@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import {StatSection, StatContainer, Title, List, ListItem, ListItemLabel} from 'components/Statistics/Statistics.styled'
+import { StatContainer, Title, List, ListItem, ListItemLabel} from 'components/Statistics/Statistics.styled'
+import { Box } from 'components/Box/Box';
 
 export function Statistics({ title, stats }) {
     return (
-        <StatSection>
+        <Box pt={1} pb={1} as="section">
             <StatContainer>
             <Title>{title}</Title>
 
@@ -16,7 +17,7 @@ export function Statistics({ title, stats }) {
                 )}
             </List>
             </StatContainer>
-        </StatSection>
+        </Box>
     );
 }
 

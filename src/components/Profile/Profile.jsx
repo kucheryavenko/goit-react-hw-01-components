@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import defaultAvatar from 'images/defaultAvatar.jpeg';
-import { ProfileSection, 
-  ProfileContainer, 
+import { ProfileContainer, 
   DescriptionContainer, 
   Image,
   DescriptionTxt,
@@ -11,6 +10,7 @@ import { ProfileSection,
   ListItemLabel,
   ListItemQuantity} 
 from './Profile.styled';
+import { Box } from 'components/Box/Box';
 
 export function Profile({
   avatarUrl = defaultAvatar, 
@@ -23,34 +23,34 @@ export function Profile({
 }) {
 
   return (
-    <ProfileSection>
-    <ProfileContainer>
-      <DescriptionContainer>
-        <Image
-          src={avatarUrl}
-          alt="User avatar"
-        />
-        <DescriptionTxtName>{userName}</DescriptionTxtName>
-        <DescriptionTxt>@{tag}</DescriptionTxt>
-        <DescriptionTxt>{location}</DescriptionTxt>
-      </DescriptionContainer>
+    <Box pt={1} pb={1} as="section">
+      <ProfileContainer>
+        <DescriptionContainer>
+          <Image
+            src={avatarUrl}
+            alt="User avatar"
+          />
+          <DescriptionTxtName>{userName}</DescriptionTxtName>
+          <DescriptionTxt>@{tag}</DescriptionTxt>
+          <DescriptionTxt>{location}</DescriptionTxt>
+        </DescriptionContainer>
 
-      <List>
-        <ListItem>
-          <ListItemLabel>Followers</ListItemLabel>
-          <ListItemQuantity>{followers}</ListItemQuantity>
-        </ListItem>
-        <ListItem>
-          <ListItemLabel>Views</ListItemLabel>
-          <ListItemQuantity>{views}</ListItemQuantity>
-        </ListItem>
-        <ListItem>
-          <ListItemLabel>Likes</ListItemLabel>
-          <ListItemQuantity>{likes}</ListItemQuantity>
-        </ListItem>
-      </List>
-    </ProfileContainer>
-    </ProfileSection>
+        <List>
+          <ListItem>
+            <ListItemLabel>Followers</ListItemLabel>
+            <ListItemQuantity>{followers}</ListItemQuantity>
+          </ListItem>
+          <ListItem>
+            <ListItemLabel>Views</ListItemLabel>
+            <ListItemQuantity>{views}</ListItemQuantity>
+          </ListItem>
+          <ListItem>
+            <ListItemLabel>Likes</ListItemLabel>
+            <ListItemQuantity>{likes}</ListItemQuantity>
+          </ListItem>
+        </List>
+      </ProfileContainer>
+    </Box>
   );
 }
 

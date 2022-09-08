@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-export const TransactionSection = styled.section`
-    padding-top: 14px;
-    padding-bottom: 14px;
-`;
-
 export const Table = styled.table`
     width: 1000px;
     margin-left: auto;
@@ -15,17 +10,17 @@ export const Table = styled.table`
 
 export const TableHead = styled.thead`
     height: 40px;
-    color: #fff;
-    background-color: #2196f3;
+    color: ${p => p.theme.colors.txt};
+    background-color: ${p => p.theme.colors.accent};;
 `;
 
 export const TableBody = styled.tbody`
-    background-color: #fff;
+    background-color: ${p => p.theme.colors.background};
 `;
 
 export const TableRow = styled.tr`
     height: 40px;
     :nth-child(even) {
-        background-color: #cacaca;
+        background-color: ${p => p.theme.colors.primary};
     }
 `;

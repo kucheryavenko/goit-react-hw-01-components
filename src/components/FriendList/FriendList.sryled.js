@@ -35,18 +35,18 @@ export const ListItem = styled.li`
 `;
 
 export const Status = styled.span`
-display: block;
-width: 12px;
-height: 12px;
-margin-right: 12px;
-border-radius: 50%;
-border: 1px solid black;
-background-color: ${p => p.isOnline ? 'green' : 'red'};
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: ${p => (p.isOnline ? 'green' : 'red')};
 `;
 export const Avatar = styled.img`
-margin-right: 12px;
+    margin-right: 12px;
 `;
 
 export const FriedName = styled.p`
-font-weight: 500;
+    font-weight: 500;
 `;

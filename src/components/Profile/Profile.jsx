@@ -1,6 +1,16 @@
 import PropTypes from 'prop-types';
 import defaultAvatar from 'images/defaultAvatar.jpeg';
-import css from './Profile.module.css';
+import { ProfileSection, 
+  ProfileContainer, 
+  DescriptionContainer, 
+  Image,
+  DescriptionTxt,
+  DescriptionTxtName, 
+  List, 
+  ListItem, 
+  ListItemLabel,
+  ListItemQuantity} 
+from './Profile.styled';
 
 export function Profile({
   avatarUrl = defaultAvatar, 
@@ -13,33 +23,34 @@ export function Profile({
 }) {
 
   return (
-    <div class="profile">
-      <div class="description">
-        <img
+    <ProfileSection>
+    <ProfileContainer>
+      <DescriptionContainer class="description">
+        <Image
           src={avatarUrl}
           alt="User avatar"
-          className={css.avatar}
         />
-        <p class="name">{userName}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+        <DescriptionTxtName>{userName}</DescriptionTxtName>
+        <DescriptionTxt>@{tag}</DescriptionTxt>
+        <DescriptionTxt>{location}</DescriptionTxt>
+      </DescriptionContainer>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <List>
+        <ListItem>
+          <ListItemLabel>Followers</ListItemLabel>
+          <ListItemQuantity>{followers}</ListItemQuantity>
+        </ListItem>
+        <ListItem>
+          <ListItemLabel>Views</ListItemLabel>
+          <ListItemQuantity>{views}</ListItemQuantity>
+        </ListItem>
+        <ListItem>
+          <ListItemLabel>Likes</ListItemLabel>
+          <ListItemQuantity>{likes}</ListItemQuantity>
+        </ListItem>
+      </List>
+    </ProfileContainer>
+    </ProfileSection>
   );
 }
 

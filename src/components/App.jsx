@@ -1,3 +1,4 @@
+import { AppContainer } from 'components/App.styled'
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
 import { FriendList } from 'components/FriendList/FriendList';
@@ -9,7 +10,7 @@ import transactions from 'components/TransactionHistory/transactions';
 
 export function App() {
   return (
-    <div>
+    <AppContainer>
       <Profile
         avatarUrl={user.avatar}  
         userName={user.username} 
@@ -29,6 +30,6 @@ export function App() {
       <TransactionHistory
         items={transactions}
       />
-    </div>
+    </AppContainer>
   );
 }
